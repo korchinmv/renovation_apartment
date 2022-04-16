@@ -25,7 +25,7 @@ function browsersync() {
 }
 
 function styles() {
-	return src('app/modules/scss/*.scss', { sourcemaps: true })
+	return src('app/scss/pages/*.scss', { sourcemaps: true })
 		.pipe(scss({ outputStyle: 'compressed' }))
 		// .pipe(concat())
 		.pipe(rename({
@@ -104,7 +104,7 @@ function svgSprites() {
 }
 
 const htmlInclude = () => {
-	return src(['app/modules/html/*.html']) // Находит любой .html файл в папке "html", куда будем подключать другие .html файлы													
+	return src(['app/html/*.html']) // Находит любой .html файл в папке "html", куда будем подключать другие .html файлы													
 		.pipe(fileInclude({
 			prefix: '@',
 			basepath: '@file',
@@ -114,11 +114,12 @@ const htmlInclude = () => {
 }
 
 function watching() {
-	watch(['app/modules/scss/**/*.scss'], styles);
+	watch(['app/modules/**/*.scss'], styles);
 	watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
 	watch(['app/**/*.html']).on('change', browserSync.reload);
+	watch(['app/html/*.html'], htmlInclude);
+	watch(['app/modules/**/*.html'], htmlInclude);
 	watch(['app/images/icons/*.svg'], svgSprites);
-	watch(['app/modules/html/**/*.html'], htmlInclude);
 }
 
 exports.styles = styles;

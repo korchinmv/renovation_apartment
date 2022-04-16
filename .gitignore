@@ -9,4 +9,4 @@ node_modules/
 dist/
 help.txt
 package-lock.json
-app/css/*
+app/css/*.css

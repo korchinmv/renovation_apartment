@@ -1,0 +1,10 @@
+//BASE STYLES//
+@import "../base/fonts";
+@import "../base/vars";
+@import "../base/mixins";
+@import "../base/reset";
+@import "../base/libs"; //использовать только на тех страницах где есть JS
+@import "../base/global";
+//BLOCKS STYLES//
+@import "../../modules/_header/_header";
+@import "../../modules/_footer/_footer";
