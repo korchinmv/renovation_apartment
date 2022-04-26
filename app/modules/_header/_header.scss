@@ -1,0 +1,101 @@
+.header {
+	min-height: 72px;
+	position: fixed;
+	top: 25px;
+	left: 0;
+	right: 0;
+	z-index: 999;
+
+	&__nav {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__feedback {
+		display: flex;
+		align-items: center;
+	}
+
+	&__tel {
+		margin-right: 40px;
+		display: inline-block;
+		font-size: 24px;
+
+		@include mq("tablet-s", max) {
+			display: none;
+		}
+	}
+
+	&__btn {
+		@include mq("desktop-s", max) {
+			margin-right: 30px;
+		}
+
+		@include mq("tablet-s", max) {
+			display: none;
+		}
+	}
+}
+
+.menu {
+	display: flex;
+	align-items: center;
+	font-size: 18px;
+
+	@include mq("desktop-s", max) {
+		position: absolute;
+		background-color: $dark-bg;
+		padding-top: 100px;
+		left: 0;
+		right: 0;
+		top: -25px;
+		height: 100vh;
+		flex-direction: column;
+		transform: translateX(-200%);
+		transition: transform 0.4s;
+		z-index: 1;
+		overflow: auto;
+	}
+
+	&__item {
+		margin: 0 15px;
+
+		@include mq("desktop-s", max) {
+			width: 100%;
+
+			&:not(:last-child) {
+				margin: 0 0 20px 0;
+			}
+		}
+	}
+
+	&__link {
+		@include mq("desktop-s", max) {
+			display: block;
+			text-align: center;
+			width: 100%;
+			padding: 10px 0;
+		}
+
+		&:after {
+			content: "";
+			display: block;
+			height: 2px;
+			background-color: transparent;
+			transition: background-color 0.3s;
+		}
+
+		&:hover::after {
+			background-color: $accent;
+
+			@include mq("desktop-s", max) {
+				background-color: transparent;
+			}
+		}
+	}
+
+	&--active {
+		transform: translateX(0);
+	}
+}

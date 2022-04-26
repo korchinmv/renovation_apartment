@@ -1,0 +1,23 @@
+.effects {
+	outline: transparent;
+	transition: opacity 0.2s, box-shadow 0.3s;
+
+	&:focus {
+		box-shadow: 0 0 0 3px rgba($white, 0.9);
+		border-radius: 3px;
+	}
+
+	&:hover {
+		opacity: 0.7;
+	}
+
+	&:active {
+		opacity: 0.5;
+	}
+}
+
+@keyframes sheen {
+	100% {
+		transform: rotateZ(60deg) translate(1em, -7em);
+	}
+}

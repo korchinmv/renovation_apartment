@@ -5,6 +5,13 @@
 @import "../base/reset";
 @import "../base/libs"; //использовать только на тех страницах где есть JS
 @import "../base/global";
+@import "../base/animations/animations";
+
+//PAGE ELEMENTS//
+@import "../elements/buttons";
+
 //BLOCKS STYLES//
 @import "../../modules/_header/_header";
+@import "../../modules/_hero/_hero";
+
 @import "../../modules/_footer/_footer";

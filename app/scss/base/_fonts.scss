@@ -8,7 +8,9 @@
 	}
 }
 
-@include font-face(Quicksand-Regular, Quicksand-Regular, 400);
-@include font-face(Quicksand-Medium, Quicksand-Medium, 500);
-@include font-face(Roboto-Bold, Roboto-Bold, 700);
 @include font-face(Roboto-Regular, Roboto-Regular, 400);
+@include font-face(Roboto-Bold, Roboto-Bold, 700);
+@include font-face(Roboto-Medium, Roboto-Medium, 500);
+
+@include font-face(Rubik-Bold, Rubik-Bold, 700);
+@include font-face(Rubik-Regular, Rubik-Regular, 400);

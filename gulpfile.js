@@ -114,7 +114,7 @@ const htmlInclude = () => {
 }
 
 function watching() {
-	watch(['app/modules/**/*.scss'], styles);
+	watch(['app/**/*.scss'], styles);
 	watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
 	watch(['app/**/*.html']).on('change', browserSync.reload);
 	watch(['app/html/*.html'], htmlInclude);

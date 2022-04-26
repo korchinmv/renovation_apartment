@@ -1,7 +1,7 @@
-// const buttonMenu = document.querySelector('.burger');
-// const menuActive = document.querySelector('.menu');
+const buttonMenu = document.querySelector('.burger');
+const menuActive = document.querySelector('.menu');
 
-// buttonMenu.onclick = function () {
-// 	menuActive.classList.toggle('menu--active');
-// 	buttonMenu.classList.toggle('burger--active');
-// };
+buttonMenu.onclick = function () {
+	menuActive.classList.toggle('menu--active');
+	buttonMenu.classList.toggle('burger--active');
+};
