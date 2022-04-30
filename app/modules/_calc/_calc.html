@@ -1,0 +1,125 @@
+<section class="calc">
+	<div class="container">
+
+		<div class="calc__descr">
+			<div class="calc__inner">
+				<h2 class="calc__title title">Ремонт — <br> <span>дело ответственное</span></h2>
+				<div class="calc__text">
+					<p>Вы хотите отремонтировать свой дом? <br>
+						Мы поможем вам воплотить мечту.</p>
+					<p>Самый важный результат в нашей работе — репутация компании и счастливые обладатели комфортного жилья.</p>
+				</div>
+			</div>
+
+			<a class="calc__link" href="#">
+				<div class="calc__link-text">
+					Посмотрите наши работы
+				</div>
+			</a>
+		</div>
+
+		<div class="calc__content">
+			<div class="calculator calc__calculator">
+				<h3 class="calculator__title">Посчитайте ремонт вашего дома</h3>
+
+				<form class="calculator__form" action="#">
+
+					<div class="calculator__type">
+						<span class="calculator__name">Тип объекта</span>
+
+						<div class="calculator__wrapper">
+							<label class="calculator-checkbox">
+								<input class="calculator-checkbox__field radio-hidden" name="type" value="1" type="radio" checked>
+								<span class="calculator-checkbox__content">Квартира новостройка</span>
+							</label>
+
+							<label class="calculator-checkbox">
+								<input class="calculator-checkbox__field radio-hidden" name="type" value="2" type="radio">
+								<span class="calculator-checkbox__content">Квартира вторичка</span>
+							</label>
+
+							<label class="calculator-checkbox">
+								<input class="calculator-checkbox__field radio-hidden" name="type" value="3" type="radio">
+								<span class="calculator-checkbox__content">Дом/коттедж</span>
+							</label>
+
+							<label class="calculator-checkbox">
+								<input class="calculator-checkbox__field radio-hidden" name="type" value="4" type="radio">
+								<span class="calculator-checkbox__content">Коммерция</span>
+							</label>
+						</div>
+					</div>
+
+					<div class="calculator__type-renovation">
+						<span class="calculator__name">Вид ремонта</span>
+
+						<div class="calculator__wrapper">
+							<label class="calculator-checkbox">
+								<input class="calculator-checkbox__field radio-hidden" name="type-renovation" value="1" type="radio"
+									checked>
+								<span class="calculator-checkbox__content">Косметический</span>
+							</label>
+
+							<label class="calculator-checkbox">
+								<input class="calculator-checkbox__field radio-hidden" name="type-renovation" value="2" type="radio">
+								<span class="calculator-checkbox__content">Капитальный</span>
+							</label>
+
+							<label class="calculator-checkbox">
+								<input class="calculator-checkbox__field radio-hidden" name="type-renovation" value="3" type="radio">
+								<span class="calculator-checkbox__content">Дизайнерский</span>
+							</label>
+						</div>
+					</div>
+
+					<div class="calculator__range-slider">
+						<span class="calculator__name">Площадь</span>
+
+						<div class="range-slider">
+							<div class="range-slider__inner">
+								<div class="range-slider__slider" id="range-slider"></div>
+								<div class="range-slider__range-wrapper">
+									<span class="range-slider__range">20</span>
+									<span class="range-slider__range">200м<sup>2</sup></span>
+								</div>
+
+							</div>
+
+							<label class="range-slider__label">
+								<input class="range-slider__input" id="input1" min="20" max="200" placeholder="30" type="number"
+									name="input-num">
+								<span class="range-slider__text">м<sup>2</sup> </span>
+							</label>
+						</div>
+					</div>
+
+					<label class="calculator__tel-label" for="tel">
+						<span class="calculator__name">Тип объекта</span>
+						<input class="calculator__tel-input" type="tel" name="tel" id="tel" placeholder="+7 (999) 999-99-99"
+							required>
+					</label>
+
+					<div class="calculator__footer">
+						<span class="calculator__warning">Нажимая на кнопку, Вы соглашаетесь с условиями <a
+								class="calculator__personal effects" href="#">обработки
+								персональных данных</a>
+						</span>
+						<button class="calculator__btn btn" type="submit">Рассчитать</button>
+					</div>
+
+				</form>
+			</div>
+
+			<div class="calc__box-links">
+				<a class="calc__box-link" href="#">
+					У меня свой дизайн-проект
+				</a>
+
+				<a class="calc__box-link" href="#">
+					Нужна помощь специалиста
+				</a>
+			</div>
+		</div>
+
+	</div>
+</section>

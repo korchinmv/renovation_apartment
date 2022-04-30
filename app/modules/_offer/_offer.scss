@@ -1,0 +1,52 @@
+.offer {
+	background-color: $white;
+	padding: 100px 0;
+
+	@include mq("tablet", max) {
+		padding: 60px 0 100px;
+	}
+
+	@include mq("phone", max) {
+		padding-top: 40px;
+	}
+
+	&__title {
+		color: $grey-700;
+		margin-bottom: 50px;
+
+		@include mq("tablet-s", max) {
+			margin-bottom: 40px;
+		}
+	}
+
+	&__list {
+		display: flex;
+		justify-content: space-between;
+
+		@include mq("tablet-s", max) {
+			display: block;
+		}
+	}
+
+	&__item {
+		max-width: 554px;
+		width: 100%;
+
+		@include mq("tablet-s", max) {
+			max-width: 100%;
+		}
+
+		&:not(:last-child) {
+			margin-right: 30px;
+
+			@include mq("tablet-s", max) {
+				margin-right: 0;
+				margin-bottom: 50px;
+			}
+
+			@include mq("phone", max) {
+				margin-bottom: 30px;
+			}
+		}
+	}
+}

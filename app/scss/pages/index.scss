@@ -9,9 +9,18 @@
 
 //PAGE ELEMENTS//
 @import "../elements/buttons";
+@import "../elements/titles";
+@import "../elements/blocks";
+@import "../elements/cards";
+@import "../elements/range-slider";
 
 //BLOCKS STYLES//
 @import "../../modules/_header/_header";
 @import "../../modules/_hero/_hero";
+@import "../../modules/_promo/_promo";
+@import "../../modules/_calc/_calc";
+@import "../../modules/_offer/_offer";
+@import "../../modules/_how-work/_how-work";
+@import "../../modules/_application-form/_application-form";
 
 @import "../../modules/_footer/_footer";

@@ -1,0 +1,100 @@
+.range-slider {
+	display: flex;
+	justify-content: space-between;
+	max-width: 540px;
+	width: 100%;
+
+	&__inner {
+		max-width: 450px;
+		width: 100%;
+		margin-right: 20px;
+	}
+
+	&__range-wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+
+	&__range {
+		display: block;
+
+		&:last-child {
+			margin-top: -4px;
+		}
+	}
+
+	&__slider {
+		max-width: 450px;
+		width: 100%;
+		margin: 20px 0 20px;
+	}
+
+	&__label {
+		display: flex;
+		align-items: center;
+		width: 71px;
+		height: 40px;
+		border: 1px solid $accent;
+		flex-shrink: 0;
+	}
+
+	&__input {
+		padding-left: 10px;
+		width: 40px;
+		outline: transparent;
+
+		&::placeholder {
+			color: $grey-700;
+		}
+	}
+	&__text {
+		margin-bottom: 5px;
+	}
+}
+
+.noUi-horizontal {
+	height: 2px;
+}
+
+.noUi-target {
+	background-color: $grey-600;
+	border-radius: 0;
+	border: none;
+}
+
+.noUi-horizontal .noUi-handle {
+	width: 20px;
+	height: 20px;
+	right: -10px;
+	top: -9px;
+	background-color: $accent;
+	border-radius: 50%;
+	border: none;
+	cursor: pointer;
+}
+
+.noUi-handle {
+	box-shadow: none;
+
+	&:before,
+	&:after {
+		display: none;
+	}
+}
+
+.noUi-connect {
+	background: none;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+	-moz-appearance: textfield;
+}

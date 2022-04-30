@@ -1,0 +1,189 @@
+.calc {
+	background-color: $dark-bg;
+	padding: 100px 0;
+
+	@include mq("tablet", max) {
+		padding: 80px 0 60px;
+	}
+
+	@include mq("phone", max) {
+		padding: 50px 0 30px;
+	}
+
+	&__descr {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 95px;
+
+		@include mq("desktop", max) {
+			display: block;
+		}
+
+		@include mq("tablet", max) {
+			margin-bottom: 75px;
+		}
+
+		@include mq("phone", max) {
+			margin-bottom: 45px;
+		}
+	}
+
+	&__inner {
+		margin-right: 20px;
+		max-width: 563px;
+
+		@include mq("desktop", max) {
+			margin-right: 0;
+			margin-bottom: 30px;
+			max-width: 100%;
+		}
+	}
+
+	&__title {
+		margin-bottom: 50px;
+
+		span {
+			font-weight: 400;
+		}
+	}
+
+	&__text {
+		padding-left: 52px;
+		position: relative;
+		max-width: 100%;
+		margin-right: 30px;
+
+		&::before {
+			content: "";
+			display: block;
+			position: absolute;
+			border: 12px solid transparent;
+			border-left: 12px solid $accent;
+			border-top: 12px solid $accent;
+			left: 0;
+			top: 0;
+		}
+
+		p {
+			font-size: 24px;
+			line-height: 1.3;
+
+			@include mq("phone", max) {
+				font-size: 18px;
+			}
+
+			&:not(:last-child) {
+				margin-bottom: 20px;
+			}
+		}
+	}
+
+	&__link {
+		max-width: 746px;
+		height: 308px;
+		padding: 50px 356px 50px 50px;
+		background-image: url(../images/room_2.jpeg);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		box-shadow: transparent;
+		transition: box-shadow 0.3s;
+		@include line-clamp(4);
+
+		@include mq("desktop", max) {
+			max-width: 100%;
+		}
+
+		@include mq("phone", max) {
+			height: 200px;
+			padding: 30px;
+		}
+
+		&:hover {
+			box-shadow: 0 0 0 3px rgba($accent, 1);
+		}
+	}
+
+	&__link-text {
+		position: relative;
+		max-width: 340px;
+		font-size: 48px;
+		font-weight: 700;
+		line-height: 1.3;
+		z-index: 2;
+
+		@include mq("tablet", max) {
+			font-size: 40px;
+		}
+
+		@include mq("phone", max) {
+			font-size: 26px;
+		}
+	}
+
+	&__content {
+		display: flex;
+		justify-content: space-between;
+
+		@include mq("desktop", max) {
+			display: block;
+		}
+	}
+
+	&__box-links {
+		max-width: 470px;
+
+		@include mq("desktop", max) {
+			max-width: 100%;
+			display: flex;
+			justify-content: space-between;
+		}
+
+		@include mq("tablet-s", max) {
+			display: block;
+		}
+	}
+
+	&__box-link {
+		display: block;
+		padding: 50px 95px 50px 50px;
+		font-size: 36px;
+		width: 100%;
+		border: 3px solid transparent;
+		border-image: linear-gradient(#ff4c00, #fb7405);
+		border-image-slice: 1;
+
+		@include mq("tablet", max) {
+			font-size: 32px;
+			padding: 30px;
+		}
+
+		@include mq("phone", max) {
+			font-size: 26px;
+			padding: 15px;
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 50px;
+
+			@include mq("desktop", max) {
+				margin-bottom: 0;
+				margin-right: 50px;
+			}
+
+			@include mq("tablet-s", max) {
+				margin-bottom: 20px;
+			}
+		}
+	}
+
+	&__calculator {
+		margin-right: 20px;
+
+		@include mq("desktop", max) {
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 50px;
+		}
+	}
+}

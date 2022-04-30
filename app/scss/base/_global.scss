@@ -11,6 +11,7 @@ body {
 	font-size: 16px;
 	line-height: 1.2;
 	color: $white;
+	background-color: $white;
 }
 
 .main {
@@ -40,4 +41,13 @@ body {
 	clip-path: inset(100%);
 	clip: rect(0 0 0 0);
 	overflow: hidden;
+}
+
+.checkbox-hidden,
+.radio-hidden {
+	width: 1px;
+	height: 1px;
+	position: absolute;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
 }

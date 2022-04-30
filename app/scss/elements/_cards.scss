@@ -1,0 +1,116 @@
+.offer-card {
+	background-color: $dark-bg;
+	display: flex;
+	flex-direction: column;
+	padding: 50px;
+	max-width: 554px;
+	width: 100%;
+	height: 100%;
+
+	@include mq("desktop-s", max) {
+		padding: 20px;
+	}
+
+	@include mq("tablet-s", max) {
+		max-width: 100%;
+		text-align: center;
+	}
+
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		flex: 1;
+	}
+
+	&__title {
+		font-size: 32px;
+		margin-bottom: 40px;
+		max-width: 300px;
+
+		@include mq("tablet", max) {
+			font-size: 26px;
+			margin-bottom: 30px;
+		}
+
+		@include mq("tablet-s", max) {
+			max-width: 100%;
+		}
+
+		@include mq("phone", max) {
+			font-size: 24px;
+			margin-bottom: 20px;
+		}
+	}
+
+	&__price {
+		display: block;
+		font-size: 32px;
+		font-weight: 400;
+		padding-bottom: 30px;
+		border-bottom: 1px solid $grey;
+		margin-bottom: 30px;
+
+		@include mq("tablet", max) {
+			font-size: 28px;
+		}
+	}
+
+	&__for {
+		display: inline-block;
+		margin-bottom: 15px;
+		font-size: 18px;
+
+		@include mq("tablet-s", max) {
+			display: none;
+		}
+	}
+
+	&__for-list {
+		margin-bottom: 20px;
+		flex: 1;
+
+		@include mq("tablet", max) {
+			margin-bottom: 15px;
+		}
+
+		@include mq("tablet-s", max) {
+			display: none;
+		}
+	}
+
+	&__item {
+		&:not(:last-child) {
+			margin-bottom: 15px;
+
+			@include mq("tablet", max) {
+				margin-bottom: 10px;
+			}
+		}
+	}
+
+	&__link {
+		display: inline-block;
+		color: $accent;
+		text-decoration: underline;
+		margin-bottom: 40px;
+
+		@include mq("tablet", max) {
+			margin-bottom: 30px;
+		}
+	}
+
+	&__btn {
+		max-width: 200px;
+		padding: 16px 50px;
+		text-align: center;
+		display: block;
+		border-radius: 0;
+		font-size: 20px;
+		font-weight: 400;
+
+		@include mq("tablet-s", max) {
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+}

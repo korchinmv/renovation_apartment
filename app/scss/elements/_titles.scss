@@ -1,0 +1,13 @@
+.title {
+	font-size: 48px;
+	font-weight: 700;
+	text-transform: uppercase;
+
+	@include mq("tablet-s", max) {
+		font-size: 36px;
+	}
+
+	@include mq("phone", max) {
+		font-size: 26px;
+	}
+}
