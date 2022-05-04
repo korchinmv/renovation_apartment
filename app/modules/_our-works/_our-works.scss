@@ -1,0 +1,255 @@
+.our-works {
+	color: $grey-700;
+	background-color: $white;
+	padding-bottom: 100px;
+
+	&__top-block {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 50px;
+
+		@include mq("phone", max) {
+			display: block;
+			margin-bottom: 40px;
+		}
+	}
+
+	&__title {
+		@include mq("phone", max) {
+			margin-bottom: 30px;
+		}
+	}
+
+	&__link {
+		font-size: 20px;
+		padding: 16px 30px;
+		border: 3px solid $accent;
+		background-color: $white;
+		transition: color 0.3s, background-color 0.3s;
+
+		@include mq("tablet-s", max) {
+			padding: 13px 26px;
+		}
+
+		@include mq("phone", max) {
+			padding: 10px 24px;
+			font-size: 16px;
+		}
+
+		&:hover {
+			background-color: $accent;
+			color: $white;
+		}
+	}
+
+	&__slide {
+		background-repeat: no-repeat;
+		background-position: top center;
+		background-size: cover;
+		position: relative;
+	}
+
+	&__descr {
+		color: $white;
+		background-color: $dark-bg;
+		padding: 50px;
+		max-width: 642px;
+		width: 100%;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+
+		@include mq("desktop-s", max) {
+			padding: 20px;
+		}
+
+		@include mq("tablet-s", max) {
+			bottom: -300px;
+			max-width: 100%;
+		}
+
+		@include mq("phone", max) {
+			padding: 10px;
+			bottom: -245px;
+		}
+
+		span {
+			font-weight: 400;
+		}
+	}
+
+	&__title-slider {
+		font-size: 32px;
+		font-weight: 700;
+		margin-bottom: 30px;
+
+		@include mq("desktop-s", max) {
+			font-size: 24px;
+			margin-bottom: 20px;
+		}
+
+		@include mq("tablet-s", max) {
+			font-size: 20px;
+		}
+
+		@include mq("phone", max) {
+			font-size: 16px;
+		}
+	}
+
+	&__adress,
+	&__square,
+	&__deadline {
+		margin-bottom: 10px;
+		font-weight: 700;
+		font-size: 20px;
+
+		@include mq("desktop-s", max) {
+			font-size: 16px;
+		}
+
+		@include mq("tablet-s", max) {
+			font-size: 14px;
+		}
+
+		@include mq("phone", max) {
+			font-size: 12px;
+		}
+	}
+
+	&__price {
+		font-weight: 700;
+		font-size: 20px;
+		margin-bottom: 30px;
+
+		@include mq("desktop-s", max) {
+			font-size: 16px;
+		}
+
+		@include mq("tablet-s", max) {
+			font-size: 14px;
+		}
+
+		@include mq("phone", max) {
+			font-size: 12px;
+		}
+	}
+
+	&__btn {
+		display: inline-block;
+		border-radius: 0;
+	}
+
+	&__prev,
+	&__next {
+		display: block;
+		position: absolute;
+		bottom: 50%;
+		transform: translateY(-50%);
+		z-index: 100;
+
+		@include mq("phone", max) {
+			display: none;
+		}
+	}
+
+	&__prev {
+		left: 0;
+	}
+
+	&__next {
+		right: 0;
+	}
+}
+
+.swiper {
+	max-width: 1580px;
+	width: 100%;
+	height: 960px;
+	padding-bottom: 70px;
+
+	@include mq("desktop-s", max) {
+		height: 660px;
+	}
+
+	@include mq("tablet-s", max) {
+		height: 620px;
+		padding-bottom: 370px;
+	}
+
+	@include mq("phone", max) {
+		padding-bottom: 370px;
+	}
+}
+
+.swiper-container {
+	position: relative;
+	padding: 0 90px;
+
+	@include mq("desktop-s", max) {
+		padding: 0 75px;
+	}
+
+	@include mq("phone", max) {
+		padding: 0;
+	}
+}
+
+.swiper-pagination-bullet {
+	max-width: 188px;
+	width: 100%;
+	height: 21px;
+	background-color: $white;
+	border: 2px solid $accent;
+	border-radius: 0;
+	opacity: 1;
+	margin: 0 15px !important;
+	transition: border-color 0.3s, background-color 0.3s;
+
+	&:hover {
+		border-color: transparent;
+		background-color: rgba($accent, 0.7);
+	}
+
+	@include mq("desktop-s", max) {
+		height: 17px;
+		margin: 0;
+		margin: 0 10px !important;
+		max-width: 150px;
+	}
+
+	@include mq("tablet-s", max) {
+		max-width: 100px;
+	}
+
+	@include mq("phone", max) {
+		max-width: 80px;
+		height: 10px;
+		margin: 0 5px !important;
+	}
+}
+
+.swiper-pagination-bullet-active {
+	background-color: $accent;
+
+	&:hover {
+		background-color: $accent;
+	}
+}
+
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+	bottom: 0;
+	width: 100%;
+
+	@include mq("desktop-s", max) {
+		bottom: 10px;
+	}
+
+	@include mq("phone", max) {
+		bottom: 80px;
+	}
+}

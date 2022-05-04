@@ -80,3 +80,54 @@
 		box-shadow: inset 0 15px 15px rgb($black, 0.3);
 	}
 }
+
+.button-slider {
+	width: 70px;
+	height: 70px;
+	background-color: $accent;
+	position: relative;
+	transition: background-color 0.3s;
+
+	&:hover {
+		background-color: rgb($accent, 0.7);
+	}
+
+	@include mq("desktop-s", max) {
+		width: 50px;
+		height: 50px;
+	}
+
+	&::after {
+		content: "";
+		display: block;
+		position: absolute;
+		left: 25px;
+		top: 14px;
+		border: 20px solid transparent;
+		border-left: 20px solid $white;
+
+		@include mq("desktop-s", max) {
+			border: 15px solid transparent;
+			border-left: 15px solid $white;
+			left: 20px;
+			top: 10px;
+		}
+	}
+
+	&--prev {
+		&::after {
+			transform: rotate(180deg);
+			right: 25px;
+			left: 0;
+		}
+	}
+}
+
+.swiper-button-disabled {
+	background-color: $grey-200;
+	transition: background-color 0.3s;
+
+	&:hover {
+		background-color: $grey-200;
+	}
+}
