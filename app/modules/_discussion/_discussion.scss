@@ -1,0 +1,160 @@
+.discussion {
+	background-color: $dark-bg;
+	padding: 100px 0;
+
+	@include mq("desktop-s", max) {
+		padding: 80px 0;
+	}
+
+	@include mq("phone", max) {
+		padding: 50px 0;
+	}
+
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+
+		@include mq("desktop-s", max) {
+			display: block;
+		}
+	}
+
+	&__content {
+		margin-right: 40px;
+		padding-bottom: 70px;
+
+		@include mq("desktop-s", max) {
+			margin-right: 0;
+			padding-bottom: 40px;
+		}
+	}
+
+	&__inner {
+		max-width: 684px;
+
+		@include mq("desktop-s", max) {
+			max-width: 100%;
+		}
+	}
+
+	&__title {
+		margin-bottom: 50px;
+
+		@include mq("tablet-s", max) {
+			margin-bottom: 30px;
+		}
+
+		@include mq("phone", max) {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__subtitle {
+		font-size: 32px;
+		font-weight: 700;
+		margin-bottom: 30px;
+
+		@include mq("tablet-s", max) {
+			font-size: 26px;
+		}
+
+		@include mq("phone", max) {
+			font-size: 18px;
+		}
+	}
+
+	&__list-name {
+		font-size: 24px;
+		margin-bottom: 30px;
+
+		@include mq("phone", max) {
+			font-size: 18px;
+			margin-bottom: 20px;
+		}
+	}
+
+	&__item {
+		font-size: 20px;
+
+		@include mq("desktop-s", max) {
+		}
+
+		@include mq("phone", max) {
+			font-size: 16px;
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 15px;
+
+			@include mq("tablet-s", max) {
+				margin-bottom: 10px;
+			}
+
+			@include mq("phone", max) {
+				margin-bottom: 7px;
+			}
+		}
+	}
+
+	&__block {
+		max-width: 655px;
+		width: 100%;
+		align-self: flex-end;
+
+		@include mq("desktop-s", max) {
+			max-width: 100%;
+		}
+	}
+
+	&__descr {
+		font-size: 24px;
+		margin-bottom: 85px;
+
+		@include mq("desktop-s", max) {
+			text-align: center;
+		}
+
+		@include mq("tablet-s", max) {
+			text-align: left;
+			margin-bottom: 50px;
+		}
+
+		@include mq("phone", max) {
+			font-size: 18px;
+			margin-bottom: 30px;
+		}
+	}
+
+	&__form {
+		max-width: 300px;
+		margin: 0 auto;
+		margin-bottom: 35px;
+
+		@include mq("desktop-s", max) {
+			max-width: 500px;
+		}
+
+		.apllication__input {
+			@include mq("phone", max) {
+				padding: 20px;
+				margin-bottom: 15px;
+			}
+
+			&::placeholder {
+				text-align: center;
+			}
+		}
+
+		.apllication__btn {
+			@include mq("phone", max) {
+				padding: 20px;
+			}
+		}
+	}
+
+	&__warning {
+		font-size: 12px;
+		display: block;
+		text-align: center;
+	}
+}
