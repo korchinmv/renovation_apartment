@@ -47,14 +47,15 @@ input.addEventListener('change', function () {
 });
 
 //SWIPER - SLIDER
-const slider = document.querySelector('.swiper');
+const slider = document.querySelector('.first-slider');
+const slider2 = document.querySelector('.second-slider');
 
 let ourWorks = new Swiper(slider, {
 	slidesPerView: '1',
 
 	navigation: {
-		nextEl: '.our-works__next',
-		prevEl: '.our-works__prev',
+		nextEl: '.our-works__slider-btn--next',
+		prevEl: '.our-works__slider-btn--prev',
 	},
 
 	pagination: {
@@ -64,6 +65,16 @@ let ourWorks = new Swiper(slider, {
 	}
 });
 
+let ourWorks2 = new Swiper(slider2, {
+	slidesPerView: '1',
+	wrapperClass: 'second-slider__wrapper',
+	slideClass: 'second-slider__slide',
+
+	navigation: {
+		prevEl: '.second-slider__btn--prev',
+		nextEl: '.second-slider__btn--next',
+	}
+});
 
 
 

@@ -1,10 +1,5 @@
 .apllication-form {
 	background-color: $white;
-	padding: 100px 0;
-
-	@include mq("tablet", max) {
-		padding: 70px 0;
-	}
 
 	&__wrapper {
 		background-color: $dark-bg;
@@ -46,6 +41,10 @@
 		@include mq("phone", max) {
 			padding: 100px 20px 50px 20px;
 			flex-wrap: wrap;
+		}
+
+		@include mq("phone-s", max) {
+			display: none;
 		}
 	}
 
@@ -102,6 +101,10 @@
 
 		@include mq("tablet-s", max) {
 			padding: 50px 20px 100px 20px;
+		}
+
+		@include mq("phone", max) {
+			padding-bottom: 50px;
 		}
 	}
 

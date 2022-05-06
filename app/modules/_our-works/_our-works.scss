@@ -3,44 +3,16 @@
 	background-color: $white;
 	padding-bottom: 100px;
 
+	@include mq("desktop-s", max) {
+		padding-bottom: 80px;
+	}
+
+	@include mq("phone", max) {
+		padding-bottom: 0;
+	}
+
 	&__top-block {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
 		margin-bottom: 50px;
-
-		@include mq("phone", max) {
-			display: block;
-			margin-bottom: 40px;
-		}
-	}
-
-	&__title {
-		@include mq("phone", max) {
-			margin-bottom: 30px;
-		}
-	}
-
-	&__link {
-		font-size: 20px;
-		padding: 16px 30px;
-		border: 3px solid $accent;
-		background-color: $white;
-		transition: color 0.3s, background-color 0.3s;
-
-		@include mq("tablet-s", max) {
-			padding: 13px 26px;
-		}
-
-		@include mq("phone", max) {
-			padding: 10px 24px;
-			font-size: 16px;
-		}
-
-		&:hover {
-			background-color: $accent;
-			color: $white;
-		}
 	}
 
 	&__slide {
@@ -80,22 +52,7 @@
 	}
 
 	&__title-slider {
-		font-size: 32px;
-		font-weight: 700;
 		margin-bottom: 30px;
-
-		@include mq("desktop-s", max) {
-			font-size: 24px;
-			margin-bottom: 20px;
-		}
-
-		@include mq("tablet-s", max) {
-			font-size: 20px;
-		}
-
-		@include mq("phone", max) {
-			font-size: 16px;
-		}
 	}
 
 	&__adress,
@@ -141,33 +98,35 @@
 		border-radius: 0;
 	}
 
-	&__prev,
-	&__next {
+	&__slider-btn {
 		display: block;
 		position: absolute;
 		bottom: 50%;
 		transform: translateY(-50%);
 		z-index: 100;
 
-		@include mq("phone", max) {
-			display: none;
+		&--prev {
+			left: 0;
 		}
-	}
 
-	&__prev {
-		left: 0;
-	}
+		&--next {
+			right: 0;
+		}
 
-	&__next {
-		right: 0;
+		&--prev,
+		&--next {
+			@include mq("phone", max) {
+				display: none;
+			}
+		}
 	}
 }
 
-.swiper {
-	max-width: 1580px;
+.first-slider {
 	width: 100%;
 	height: 960px;
 	padding-bottom: 70px;
+	overflow: hidden;
 
 	@include mq("desktop-s", max) {
 		height: 660px;

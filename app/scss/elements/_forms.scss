@@ -63,6 +63,10 @@
 	&__wrapper {
 		display: flex;
 		flex-wrap: wrap;
+
+		@include mq("phone", max) {
+			display: block;
+		}
 	}
 
 	&__tel-label {
