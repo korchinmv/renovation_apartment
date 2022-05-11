@@ -45,6 +45,7 @@ function scripts() {
 		'node_modules/jquery/dist/jquery.js',
 		'node_modules/nouislider/dist/nouislider.js',
 		'node_modules/swiper/swiper-bundle.js',
+		'node_modules/inputmask/dist/inputmask.js',
 		'app/js/main.js'
 	])
 		.pipe(concat('main.min.js'))

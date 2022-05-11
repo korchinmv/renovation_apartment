@@ -159,13 +159,23 @@
 .apllication {
 	margin-bottom: 30px;
 
+	&__box {
+		margin-bottom: 10px;
+
+		label {
+			color: $accent;
+			padding-left: 10px;
+			font-size: 14px;
+		}
+	}
+
 	&__input {
 		display: block;
 		width: 100%;
 		border: 1px solid $accent;
 		padding: 30px 20px;
 		background-color: $dark-bg;
-		margin-bottom: 30px;
+		margin-bottom: 5px;
 		color: $white;
 
 		@include mq("phone", max) {
@@ -187,5 +197,68 @@
 		@include mq("phone", max) {
 			font-size: 18px;
 		}
+	}
+}
+
+.form-callback {
+	&__top {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__box {
+		width: 100%;
+		margin-bottom: 10px;
+
+		label {
+			color: $accent;
+			padding-left: 10px;
+			font-size: 14px;
+		}
+	}
+
+	&__input,
+	&__textarea {
+		background-color: #1d2228;
+		border: 1px solid $grey-300;
+		width: 100%;
+		display: block;
+		padding: 20px;
+		color: $white;
+		outline: transparent;
+
+		&:focus {
+			border-color: $accent;
+		}
+
+		&::placeholder {
+			color: $white;
+		}
+	}
+
+	&__input {
+		max-width: 300px;
+		width: 100%;
+		margin-bottom: 5px;
+
+		&:not(:last-child) {
+			margin-right: 50px;
+		}
+	}
+
+	&__textarea {
+		resize: none;
+		height: 150px;
+		margin-bottom: 5px;
+	}
+
+	&__file-span {
+		cursor: pointer;
+		display: inline-block;
+		margin-bottom: 50px;
+		font-size: 16px;
+		padding: 10px 20px;
+		background-color: $grey-300;
+		margin-right: 10px;
 	}
 }

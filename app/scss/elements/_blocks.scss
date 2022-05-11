@@ -75,3 +75,146 @@
 		padding: 50px 0;
 	}
 }
+
+.accordion {
+	color: $grey-700;
+
+	&__item {
+		border-bottom: 1px solid $grey-300;
+
+		&:not(:last-child) {
+			margin-bottom: 40px;
+
+			@include mq("phone", max) {
+				margin-bottom: 20px;
+			}
+		}
+	}
+
+	&__btn {
+		display: flex;
+		align-items: center;
+		position: relative;
+		width: 100%;
+		padding-bottom: 35px;
+		font-size: 36px;
+
+		@include mq("tablet", max) {
+			font-size: 28px;
+		}
+
+		@include mq("tablet-s", max) {
+			font-size: 22px;
+		}
+
+		@include mq("phone", max) {
+			font-size: 18px;
+			padding-bottom: 20px;
+		}
+
+		@include mq("phone-s", max) {
+			font-size: 17px;
+		}
+
+		&::after {
+			content: "";
+			display: block;
+			position: absolute;
+			right: 0;
+			top: 8px;
+			border-left: 25px solid transparent;
+			border-right: 25px solid transparent;
+			border-bottom: 26px solid $accent;
+			transition: transform 0.3s;
+
+			@include mq("tablet", max) {
+				border-left: 20px solid transparent;
+				border-right: 20px solid transparent;
+				border-bottom: 20px solid $accent;
+			}
+
+			@include mq("tablet-s", max) {
+				border-left: 15px solid transparent;
+				border-right: 15px solid transparent;
+				border-bottom: 15px solid $accent;
+			}
+
+			@include mq("phone", max) {
+				top: 4px;
+			}
+
+			@include mq("phone-s", max) {
+				border-left: 13px solid transparent;
+				border-right: 13px solid transparent;
+				border-bottom: 13px solid $accent;
+			}
+		}
+	}
+
+	&__num {
+		color: $accent;
+		font-family: Rubik-Bold;
+		font-weight: 700;
+		color: $accent;
+		margin-right: 40px;
+
+		@include mq("tablet-s", max) {
+			margin-right: 20px;
+		}
+
+		@include mq("phone-s", max) {
+			margin-right: 15px;
+		}
+	}
+
+	&__name {
+		font-weight: 700;
+
+		@include mq("phone-s", max) {
+			margin-right: 35px;
+		}
+	}
+
+	&__content {
+		font-size: 20px;
+		max-width: 1600px;
+		max-height: 0;
+		overflow: hidden;
+		opacity: 1;
+		width: 100%;
+		margin: 0 auto;
+		will-change: max-height;
+		transition: overflow 0.3s, opacity 0.3s, max-height 0.3s ease-out;
+
+		@include mq("tablet-s", max) {
+			font-size: 18px;
+		}
+
+		@include mq("phone", max) {
+			font-size: 16px;
+		}
+
+		@include mq("phone-s", max) {
+			font-size: 15px;
+		}
+	}
+
+	.open .accordion__content {
+		overflow: visible;
+		margin-bottom: 70px;
+
+		@include mq("tablet-s", max) {
+			margin-bottom: 50px;
+		}
+
+		@include mq("phone", max) {
+			margin-bottom: 30px;
+		}
+	}
+
+	.open .accordion__btn {
+		&::after {
+			transform: rotate(180deg);
+		}
+	}
+}

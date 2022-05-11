@@ -4,6 +4,24 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="../images/favicons/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="../images/favicons/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" sizes="57x57" href="../images/favicons/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="../images/favicons/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="../images/favicons/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="../images/favicons/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="../images/favicons/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="../images/favicons/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="../images/favicons/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="../images/favicons/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="../images/favicons/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="../images/favicons/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../images/favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="../images/favicons/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../images/favicons/favicon-16x16.png">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
 	<title>Строительная компания СтройТат</title>
 	<link rel="stylesheet" href="css/index.min.css">
 </head>
@@ -12,52 +30,52 @@
 	<header class="header">
 	<div class="container">
 		<nav class="header__nav">
-			<a class="logo effects" href="#">
+			<a class="logo effects" href="index.html">
 				<img class="logo__img" src="images/logo.svg" alt="Логотип компании" width="176" height="72">
 			</a>
 
 			<ul class="menu">
 				<li class="menu__item">
-					<a class="menu__link" href="#">
+					<a class="menu__link" href="#hero">
 						Главная
 					</a>
 				</li>
 
 				<li class="menu__item">
-					<a class="menu__link" href="#">
+					<a class="menu__link" href="#repair-services">
 						Услуги
 					</a>
 				</li>
 
 				<li class="menu__item">
-					<a class="menu__link" href="#">
+					<a class="menu__link" href="#promo">
 						О нас
 					</a>
 				</li>
 
 				<li class="menu__item">
-					<a class="menu__link" href="#">
+					<a class="menu__link" href="#our-works">
 						Портфолио
 					</a>
 				</li>
 
 				<li class="menu__item">
-					<a class="menu__link" href="#">
-						Контакты
+					<a class="menu__link" href="#calc">
+						Стоимость услуг
 					</a>
 				</li>
 
 				<li class="menu__item">
-					<a class="menu__link" href="#">
+					<a class="menu__link" href="#reviews">
 						Отзывы
 					</a>
 				</li>
 			</ul>
 
 			<div class="header__feedback">
-				<a class="header__tel tel effects" href="tel:+79999999999">+7 999 999-99-99</a>
+				<a class="header__tel tel effects" href="tel:+79999999999">+7 495 999-88-54</a>
 
-				<button class="header__btn btn" type="button">Заказать звонок</button>
+				<button class="header__btn btn" type="button" data-path="callback">Заказать звонок</button>
 
 				<button class="burger" type="button">
 					<span class="burger__line"></span>
@@ -69,7 +87,7 @@
 	</div>
 </header>
 	<main class="main">
-		<section class="hero" style="background-image: url('images/promo.jpg')">
+		<section class="hero" id="hero" style="background-image: url('images/promo.jpg')">
 	<div class="container">
 		<div class="hero__wrapper">
 			<h1 class="hero__title">Профессиональный ремонт <br> и отделка недвижимости «под ключ»
@@ -77,14 +95,14 @@
 			</h1>
 
 			<div class="hero__inner">
-				<a class="hero__link btn" href="#">Рассчитать стоимость</a>
-				<button class="hero__btn btn">Оставить заявку</button>
+				<a class="hero__link btn" href="#calc">Рассчитать стоимость</a>
+				<a class="hero__btn btn" href="#apllication">Оставить заявку</a>
 			</div>
 		</div>
 
 	</div>
 </section>
-		<section class="promo promo--mb">
+		<section class="promo promo--mb promo--mt" id="promo">
 	<div class="container">
 		<div class="promo__wrapper">
 			<div class="promo__content">
@@ -139,7 +157,7 @@
 		</div>
 	</div>
 </section>
-		<section class="calc padding-section">
+		<section class="calc padding-section" id="calc">
 	<div class="container">
 
 		<div class="calc__descr">
@@ -159,7 +177,7 @@
 			</a>
 		</div>
 
-		<div class="calc__content">
+		<div class="calc__content" id="calc2">
 			<div class="calculator calc__calculator">
 				<h3 class="calculator__title">Посчитайте ремонт вашего дома</h3>
 
@@ -283,7 +301,7 @@
 						</ul>
 						<a class="offer-card__link effects" href="#">Посмотреть список работ</a>
 					</div>
-					<a class="offer-card__btn btn" href="#">заказать</a>
+					<button class="offer-card__btn btn" data-path="callback">заказать</button>
 				</article>
 			</li>
 
@@ -300,7 +318,7 @@
 						</ul>
 						<a class="offer-card__link effects" href="#">Посмотреть список работ</a>
 					</div>
-					<a class="offer-card__btn btn" href="#">заказать</a>
+					<button class="offer-card__btn btn" data-path="callback">заказать</button>
 				</article>
 			</li>
 
@@ -317,7 +335,7 @@
 						</ul>
 						<a class="offer-card__link effects" href="#">Посмотреть список работ</a>
 					</div>
-					<a class="offer-card__btn btn" href="#">заказать</a>
+					<button class="offer-card__btn btn" data-path="callback">заказать</button>
 				</article>
 			</li>
 
@@ -325,7 +343,7 @@
 
 	</div>
 </section>
-		<section class="our-works">
+		<section class="our-works" id="our-works">
 	<div class="container">
 
 		<div class="our-works__top-block top-block">
@@ -430,7 +448,7 @@
 		</div>
 	</div>
 </section>
-		<section class="apllication-form padding-section ">
+		<section class="apllication-form padding-section" id="apllication">
 	<div class="container">
 		<div class="apllication-form__wrapper" style="background-image: url('images/plan.png')">
 
@@ -452,9 +470,14 @@
 			<div class="apllication-form__inner">
 				<h2 class="apllication-form__title">Сделай ремонт дома вместе со СтройТат</h2>
 				<span class="apllication-form__subtitle">Созвонимся, встретимся и начнём...</span>
-				<form class="apllication-form__form apllication" action="#">
-					<input class="apllication__input effects" type="tel" name="apllication_tel" placeholder="Ваш телефон">
-					<button class="apllication__btn btn" type="submit">Оставить заявку</button>
+				<form class="apllication-form__form apllication" action="#" id="apllication-form" name="apllication-form">
+
+					<div class="apllication__box">
+						<input class="apllication__input" type="tel" name="apllication_tel" placeholder="Ваш телефон" required>
+						<label class="apllication__validate" for="tel-callback">В формате: +7 999 000-00-00</label>
+					</div>
+
+					<button class="apllication__btn btn" type="submit" data-path="thanks">Оставить заявку</button>
 				</form>
 
 				<span class="apllication-form__warning warning">Нажимая на кнопку, Вы соглашаетесь с условиями <a
@@ -466,7 +489,7 @@
 		</div>
 	</div>
 </section>
-		<section class="reviews">
+		<section class="reviews" id="reviews">
 	<div class="container">
 
 		<div class="reviews__top-block top-block">
@@ -495,7 +518,6 @@
 										<span class="second-slider__name">МЖК Sunrice City</span>
 									</div>
 								</div>
-
 
 								<div class="second-slider__inner">
 									<div class="second-slider__task">
@@ -665,7 +687,7 @@
 		</div>
 	</div>
 </section>
-		<section class="repair-services">
+		<section class="repair-services" id="repair-services">
 	<div class="container">
 		<h2 class="repair-services__title title">Услуги ремонта</h2>
 
@@ -786,9 +808,13 @@
 				<div class="discussion__descr">Заполните форму, мы перезвоним вам и согласуем дату и время визита специалиста
 				</div>
 
-				<form class="discussion__form apllication" action="#">
-					<input class="apllication__input effects" type="tel" name="apllication_tel" placeholder="Ваш телефон">
-					<button class="apllication__btn btn" type="submit">Перезвоните мне</button>
+				<form class="discussion__form apllication" action="#" id="apllication-form" name="apllication-form">
+					<div class="apllication__box">
+						<input class="apllication__input" type="tel" name="apllication_tel" placeholder="Ваш телефон" required>
+						<label class="apllication__validate" for="tel-callback">В формате: +7 999 000-00-00</label>
+					</div>
+
+					<button class="apllication__btn btn" type="submit" data-path="thanks">Перезвоните мне</button>
 				</form>
 
 				<span class="discussion__warning warning">Нажимая на кнопку, Вы соглашаетесь с условиями <a
@@ -797,6 +823,128 @@
 				</span>
 			</div>
 		</div>
+	</div>
+</section>
+		<section class="answer-to-question padding-section">
+	<div class="container">
+		<h2 class="answer-to-question__title title">Ответы на ваши вопросы</h2>
+
+		<ul class="accordion">
+			<li class="accordion__item">
+				<button class="accordion__btn" aria-expanded="false">
+					<span class="accordion__num">01</span>
+					<span class="accordion__name">С чего лучше начать ремонт квартиры?</span>
+				</button>
+				<div class="accordion__content" aria-hidden="true">Lorem ipsum dolor sit amet consectetur, adipisicing
+					elit. Ut
+					labore, iusto eum
+					dolore modi, quos dolorem perferendis in reprehenderit neque quis saepe reiciendis aliquid, illo ipsam
+					expedita illum facilis? Ratione accusamus molestias dolorum aspernatur excepturi optio deleniti sunt possimus
+					esse dolor, omnis sint, qui quo dicta rem, saepe porro exercitationem aliquam minima officia! Ipsam recusandae
+					eum dolorem error tempora. Laudantium, quo adipisci? Illum ullam quo nemo molestias consequatur? Deleniti
+					magni cupiditate ratione culpa facilis iste, quam id illo architecto possimus soluta? Nihil dolore blanditiis
+					dolorum odio facilis voluptate exercitationem nesciunt obcaecati deserunt commodi expedita, neque ipsum
+					libero? Blanditiis voluptate quis necessitatibus suscipit eveniet a, optio porro laboriosam, vitae mollitia ut
+					nulla dolorum, cumque iure veritatis voluptas explicabo! Quas voluptatibus suscipit ipsum nesciunt incidunt
+					veritatis, quae nihil quasi dicta corporis rerum magnam, nisi possimus inventore iure consequuntur laborum,
+					deleniti distinctio eligendi itaque odit! Dolorum cum doloribus porro. Illo in neque odit?
+				</div>
+			</li>
+
+			<li class="accordion__item">
+				<button class="accordion__btn" aria-expanded="false">
+					<span class="accordion__num">02</span>
+					<span class="accordion__name">С чего лучше начать ремонт дома?</span>
+				</button>
+				<div class="accordion__content" aria-hidden="true">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
+					quasi, vitae unde
+					autem dolorem eius. Voluptas odio molestiae laborum beatae? Sed natus sit sint similique, eaque praesentium
+					laboriosam ad quas minima libero reiciendis nisi explicabo alias aspernatur iure placeat repellat dignissimos
+					soluta molestias, sunt quia error necessitatibus in aliquam. Iste quidem nesciunt officiis a possimus dolore,
+					voluptatibus ullam nulla temporibus commodi similique impedit fuga neque, illum mollitia esse quisquam quos
+					quo cum! Voluptatem mollitia dolorem ea ad in earum doloribus modi quis esse sapiente nesciunt fuga ipsam
+					officiis voluptatum eaque, optio similique? Ea in similique dolorum voluptatibus, eaque sequi sint itaque
+					excepturi cumque maiores architecto error dolor repellat eum dolorem ducimus iure, expedita accusamus aliquam
+					illum quas blanditiis hic corporis nemo! Inventore impedit nemo nostrum ex et corrupti vel distinctio pariatur
+					molestiae quae earum a ipsa, ea rerum repellendus dolorum placeat ratione, blanditiis exercitationem cum rem?
+					Tempora voluptas, aperiam eos recusandae itaque labore enim corrupti laboriosam, vero exercitationem possimus,
+					dolorem neque modi adipisci deleniti rerum illo architecto aspernatur? Quidem, dignissimos harum minus maiores
+					vel, saepe quae exercitationem beatae quod ut voluptatum, tempore molestias recusandae odit perferendis.
+					Impedit ducimus doloribus eaque error minima sint tenetur ut dolorum fugiat est earum incidunt sed odit odio
+					distinctio commodi amet quas modi corporis alias, nihil qui quasi cum saepe! Vero, blanditiis nam mollitia
+					necessitatibus voluptates deleniti reprehenderit libero doloribus itaque architecto, rerum distinctio. Porro
+					impedit consectetur aperiam reprehenderit accusantium doloribus repellendus. Placeat obcaecati commodi
+					repudiandae error. Quo corporis ab iusto molestias dolores. Officia, voluptates earum? Iure quod neque iusto
+					ad suscipit, officia ea nobis aspernatur voluptatibus dolorum! Vitae aliquam odit cupiditate, ex veritatis
+					rerum temporibus optio molestias! Ducimus aliquid quis, modi, aut fuga iusto quae vel reiciendis praesentium,
+					necessitatibus tempore doloremque possimus ipsum rerum suscipit vero voluptate ratione odio! Debitis atque
+					delectus ut fugit!
+				</div>
+			</li>
+
+			<li class="accordion__item">
+				<button class="accordion__btn" aria-expanded="false">
+					<span class="accordion__num">03</span>
+					<span class="accordion__name">С чего лучше начать ремонт дачи?</span>
+				</button>
+				<div class="accordion__content" aria-hidden="true">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+					Tempore quibusdam
+					laborum
+					aperiam modi praesentium mollitia architecto totam facere maxime! Rem illum cumque nulla id veritatis facilis
+					commodi a nihil, dignissimos quo, doloribus esse vel fugit est. Dolorum quibusdam nisi, repellendus dolorem
+					maxime veritatis illo quo adipisci. Quidem hic cupiditate minima ex illum, esse voluptas delectus ab nobis
+					consequatur consequuntur possimus nemo quae quasi, ullam obcaecati sed adipisci laboriosam dolorum recusandae,
+					doloribus laudantium commodi provident. Ipsa necessitatibus ab sed dolore!
+				</div>
+			</li>
+
+			<li class="accordion__item">
+				<button class="accordion__btn" aria-expanded="false">
+					<span class="accordion__num">04</span>
+					<span class="accordion__name">С чего лучше начать ремонт оффиса?</span>
+				</button>
+				<div class="accordion__content" aria-hidden="true">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+					Consectetur similique
+					ipsum perspiciatis aliquam nihil eligendi consequatur, aspernatur labore nisi suscipit nesciunt,
+					necessitatibus iusto assumenda quis ipsa laboriosam beatae distinctio veniam culpa optio! Perferendis
+					consectetur quis ad consequuntur ex, dolorem quo sequi officia neque delectus aspernatur quam quasi obcaecati,
+					non, sint tenetur est quidem fugit. Quidem, ipsum? Blanditiis harum eveniet repellat adipisci! Ipsum atque,
+					quas aliquid voluptatum expedita nobis dicta numquam, eveniet velit minima iusto cum temporibus. Voluptatum id
+					autem et consectetur! Accusamus repellat facilis nihil minus quia reprehenderit dolores est itaque eligendi.
+					Non nesciunt sint ea quod provident aliquid omnis ducimus quidem, atque iste dolorem delectus quae, iure minus
+					tempora eaque architecto incidunt perferendis est fugiat quia pariatur. Soluta accusamus possimus aspernatur!
+					Corrupti, quisquam fugit, fugiat alias rem magnam culpa eveniet unde eos doloremque deleniti minus aut
+					repudiandae? Hic, saepe deserunt? Ut deserunt doloremque eos nisi, delectus error molestias iure quos dolor.
+					Inventore, quod! Repudiandae et unde quasi dolore modi fugiat. Officia delectus totam iure, exercitationem
+					sint mollitia eaque distinctio fuga blanditiis deleniti tempora asperiores voluptates beatae ab aliquam,
+					aspernatur natus? Corrupti recusandae fugiat enim iure in ratione architecto vel facere excepturi deserunt.
+					Cumque quod, nihil molestiae aliquid accusamus quaerat fugit ducimus et corrupti non numquam doloribus iure
+					ratione est iste ab, ea autem perspiciatis, incidunt unde earum. Quisquam dolores culpa suscipit sapiente
+					minima necessitatibus ipsam quos numquam ullam quasi!
+				</div>
+			</li>
+
+			<li class="accordion__item">
+				<button class="accordion__btn" aria-expanded="false">
+					<span class="accordion__num">05</span>
+					<span class="accordion__name">С чего лучше начать ремонт лоджии?</span>
+				</button>
+				<div class="accordion__content" aria-hidden="true">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+					Expedita eum cum
+					perspiciatis rem unde accusamus saepe neque, dolore doloribus, dolorem culpa praesentium repellat, ipsum nihil
+					modi ipsam! Asperiores aliquid cumque vero error vel! Quos odio ab aut distinctio doloremque vel architecto,
+					molestias sed esse. Temporibus quod sint esse numquam, necessitatibus ipsum in quibusdam, illo non saepe quasi
+					voluptatem dolores accusamus aut est qui, obcaecati laborum? At velit quo rem enim, impedit ullam nesciunt
+					repudiandae soluta inventore vero. Nulla delectus illum architecto enim culpa, consequuntur quod omnis
+					voluptates quisquam, assumenda perspiciatis voluptate totam! Totam nemo reprehenderit sed perferendis numquam.
+					Hic nesciunt, dolorem totam eligendi placeat labore quo minus aperiam officia commodi aliquid ipsum quidem
+					facilis, aspernatur provident, fuga perspiciatis inventore at ad. Magnam saepe accusantium quae, consequatur
+					provident aut eligendi quam distinctio quidem voluptatum minus at, minima commodi, corrupti deleniti
+					consectetur!
+				</div>
+			</li>
+
+		</ul>
 	</div>
 </section>
 	</main>
@@ -1067,7 +1215,7 @@
 
 					<ul class="footer-main__service-box">
 						<li class="footer-main__service-item">
-							<a class="footer-main__service-link effects" href="#">Калькулятор стоимости</a>
+							<a class="footer-main__service-link effects" href="#calc2">Калькулятор стоимости</a>
 						</li>
 
 						<li class="footer-main__service-item">
@@ -1196,11 +1344,12 @@
 						<span class="footer-main__block-title">Контакты</span>
 						<ul class="footer-main__contacts">
 							<li class="footer-main__contacts-item">
-								<a class="footer-main__contacts-tel tel effects" href="tel:+79999999999">+7 999 999-99-99</a>
+								<a class="footer-main__contacts-tel tel effects" href="tel:+74959998854">+7 495 999-88-54</a>
 							</li>
 
 							<li class="footer-main__contacts-item">
-								<a class="footer-main__contacts-callback callback effects" href="#">Перезвоните мне</a>
+								<button class="footer-main__contacts-callback callback effects"
+									data-path="callback">Перезвоните мне</button>
 							</li>
 
 							<li class="footer-main__contacts-item">
@@ -1227,6 +1376,58 @@
 		</div>
 	</div>
 </footer>
+	<div class="modals">
+	<div class="modals__overlay">
+		<div class="modal modal-callback" data-target="callback">
+			<button class="modal__close burger burger--active" type="button"></button>
+			<h2 class="modal__title">Заполните форму</h2>
+			<span class="modal__subtitle">После этого мы перезвоним и обсудим все детали</span>
+
+			<form class="modal__form form-callback" action="#" id="modal-callback" name="modal-callback" method="post"
+				enctype="multipart/form-data">
+				<div class="form-callback__top">
+
+					<div class="form-callback__box">
+						<input class="form-callback__input" type="text" placeholder="Имя" name="username-callback"
+							id="name-modal-form" data-validate-field="name" required>
+					</div>
+
+					<div class="form-callback__box">
+						<input class="form-callback__input" type="tel" placeholder="Ваш телефон" name="tel-callback"
+							id="tel-modal-form" data-validate-field="tel" required>
+					</div>
+				</div>
+
+				<div class="form-callback__box">
+					<textarea class="form-callback__textarea" name="message-modal-form" id="message-callback"
+						placeholder="Комментарий к заявке" data-reg="^[А-ЯЁ][а-яё]*$" data-validate-field="textarea"></textarea>
+				</div>
+
+				<label class="form-callback__download">
+					<input class="form-callback__file-input checkbox-hidden" id="download" accept=".jpeg, .png, .jpg" type="file"
+						name="download-callback" multiple>
+					<span class="form-callback__file-span">Выберите файл</span>
+					<label class="form-callback__file-descr" for="download">jpeg, png, jpg</label>
+				</label>
+
+				<div class="modal__bot">
+					<span class="modal__warning warning">Нажимая на кнопку, Вы&nbsp;соглашаетесь с&nbsp;условиями <a
+							class="modal__personal warning__personal effects" href="#">обработки
+							персональных данных</a>
+					</span>
+
+					<button class="modal__btn btn" type="submit" data-path="thanks">Оставить заявку</button>
+				</div>
+			</form>
+		</div>
+
+		<div class="modal modal--thanks" data-target="thanks">
+			<h2 class="modal__title">Спасибо за оставленную заявку!</h2>
+			<span class="modal__subtitle">менеджер свяжется с вами в ближайшее время...</span>
+		</div>
+
+	</div>
+</div>
 	<script src="js/main.min.js"></script>
 </body>
 

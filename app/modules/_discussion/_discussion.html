@@ -21,9 +21,13 @@
 				<div class="discussion__descr">Заполните форму, мы перезвоним вам и согласуем дату и время визита специалиста
 				</div>
 
-				<form class="discussion__form apllication" action="#">
-					<input class="apllication__input effects" type="tel" name="apllication_tel" placeholder="Ваш телефон">
-					<button class="apllication__btn btn" type="submit">Перезвоните мне</button>
+				<form class="discussion__form apllication" action="#" id="apllication-form" name="apllication-form">
+					<div class="apllication__box">
+						<input class="apllication__input" type="tel" name="apllication_tel" placeholder="Ваш телефон" required>
+						<label class="apllication__validate" for="tel-callback">В формате: +7 999 000-00-00</label>
+					</div>
+
+					<button class="apllication__btn btn" type="submit" data-path="thanks">Перезвоните мне</button>
 				</form>
 
 				<span class="discussion__warning warning">Нажимая на кнопку, Вы соглашаетесь с условиями <a

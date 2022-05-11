@@ -1,4 +1,4 @@
-<section class="apllication-form padding-section ">
+<section class="apllication-form padding-section" id="apllication">
 	<div class="container">
 		<div class="apllication-form__wrapper" style="background-image: url('images/plan.png')">
 
@@ -20,9 +20,14 @@
 			<div class="apllication-form__inner">
 				<h2 class="apllication-form__title">Сделай ремонт дома вместе со СтройТат</h2>
 				<span class="apllication-form__subtitle">Созвонимся, встретимся и начнём...</span>
-				<form class="apllication-form__form apllication" action="#">
-					<input class="apllication__input effects" type="tel" name="apllication_tel" placeholder="Ваш телефон">
-					<button class="apllication__btn btn" type="submit">Оставить заявку</button>
+				<form class="apllication-form__form apllication" action="#" id="apllication-form" name="apllication-form">
+
+					<div class="apllication__box">
+						<input class="apllication__input" type="tel" name="apllication_tel" placeholder="Ваш телефон" required>
+						<label class="apllication__validate" for="tel-callback">В формате: +7 999 000-00-00</label>
+					</div>
+
+					<button class="apllication__btn btn" type="submit" data-path="thanks">Оставить заявку</button>
 				</form>
 
 				<span class="apllication-form__warning warning">Нажимая на кнопку, Вы соглашаетесь с условиями <a

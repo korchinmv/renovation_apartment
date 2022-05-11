@@ -1,0 +1,16 @@
+.answer-to-question {
+	background-color: $white;
+	color: $grey-700;
+
+	&__title {
+		margin-bottom: 50px;
+
+		@include mq("tablet-s", max) {
+			margin-bottom: 40px;
+		}
+
+		@include mq("phone", max) {
+			margin-bottom: 30px;
+		}
+	}
+}

@@ -1,0 +1,52 @@
+<div class="modals">
+	<div class="modals__overlay">
+		<div class="modal modal-callback" data-target="callback">
+			<button class="modal__close burger burger--active" type="button"></button>
+			<h2 class="modal__title">Заполните форму</h2>
+			<span class="modal__subtitle">После этого мы перезвоним и обсудим все детали</span>
+
+			<form class="modal__form form-callback" action="#" id="modal-callback" name="modal-callback" method="post"
+				enctype="multipart/form-data">
+				<div class="form-callback__top">
+
+					<div class="form-callback__box">
+						<input class="form-callback__input" type="text" placeholder="Имя" name="username-callback"
+							id="name-modal-form" data-validate-field="name" required>
+					</div>
+
+					<div class="form-callback__box">
+						<input class="form-callback__input" type="tel" placeholder="Ваш телефон" name="tel-callback"
+							id="tel-modal-form" data-validate-field="tel" required>
+					</div>
+				</div>
+
+				<div class="form-callback__box">
+					<textarea class="form-callback__textarea" name="message-modal-form" id="message-callback"
+						placeholder="Комментарий к заявке" data-reg="^[А-ЯЁ][а-яё]*$" data-validate-field="textarea"></textarea>
+				</div>
+
+				<label class="form-callback__download">
+					<input class="form-callback__file-input checkbox-hidden" id="download" accept=".jpeg, .png, .jpg" type="file"
+						name="download-callback" multiple>
+					<span class="form-callback__file-span">Выберите файл</span>
+					<label class="form-callback__file-descr" for="download">jpeg, png, jpg</label>
+				</label>
+
+				<div class="modal__bot">
+					<span class="modal__warning warning">Нажимая на кнопку, Вы&nbsp;соглашаетесь с&nbsp;условиями <a
+							class="modal__personal warning__personal effects" href="#">обработки
+							персональных данных</a>
+					</span>
+
+					<button class="modal__btn btn" type="submit" data-path="thanks">Оставить заявку</button>
+				</div>
+			</form>
+		</div>
+
+		<div class="modal modal--thanks" data-target="thanks">
+			<h2 class="modal__title">Спасибо за оставленную заявку!</h2>
+			<span class="modal__subtitle">менеджер свяжется с вами в ближайшее время...</span>
+		</div>
+
+	</div>
+</div>

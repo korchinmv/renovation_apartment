@@ -4,6 +4,24 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="../images/favicons/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="../images/favicons/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" sizes="57x57" href="../images/favicons/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="../images/favicons/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="../images/favicons/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="../images/favicons/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="../images/favicons/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="../images/favicons/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="../images/favicons/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="../images/favicons/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="../images/favicons/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="../images/favicons/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../images/favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="../images/favicons/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../images/favicons/favicon-16x16.png">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
 	<title>Главная страница</title>
 	<link rel="stylesheet" href="css/index.min.css">
 </head>
@@ -12,52 +30,52 @@
 	<header class="header">
 	<div class="container">
 		<nav class="header__nav">
-			<a class="logo effects" href="#">
+			<a class="logo effects" href="index.html">
 				<img class="logo__img" src="images/logo.svg" alt="Логотип компании" width="176" height="72">
 			</a>
 
 			<ul class="menu">
 				<li class="menu__item">
-					<a class="menu__link" href="#">
+					<a class="menu__link" href="#hero">
 						Главная
 					</a>
 				</li>
 
 				<li class="menu__item">
-					<a class="menu__link" href="#">
+					<a class="menu__link" href="#repair-services">
 						Услуги
 					</a>
 				</li>
 
 				<li class="menu__item">
-					<a class="menu__link" href="#">
+					<a class="menu__link" href="#promo">
 						О нас
 					</a>
 				</li>
 
 				<li class="menu__item">
-					<a class="menu__link" href="#">
+					<a class="menu__link" href="#our-works">
 						Портфолио
 					</a>
 				</li>
 
 				<li class="menu__item">
-					<a class="menu__link" href="#">
-						Контакты
+					<a class="menu__link" href="#calc">
+						Стоимость услуг
 					</a>
 				</li>
 
 				<li class="menu__item">
-					<a class="menu__link" href="#">
+					<a class="menu__link" href="#reviews">
 						Отзывы
 					</a>
 				</li>
 			</ul>
 
 			<div class="header__feedback">
-				<a class="header__tel tel effects" href="tel:+79999999999">+7 999 999-99-99</a>
+				<a class="header__tel tel effects" href="tel:+79999999999">+7 495 999-88-54</a>
 
-				<button class="header__btn btn" type="button">Заказать звонок</button>
+				<button class="header__btn btn" type="button" data-path="callback">Заказать звонок</button>
 
 				<button class="burger" type="button">
 					<span class="burger__line"></span>
@@ -338,7 +356,7 @@
 
 					<ul class="footer-main__service-box">
 						<li class="footer-main__service-item">
-							<a class="footer-main__service-link effects" href="#">Калькулятор стоимости</a>
+							<a class="footer-main__service-link effects" href="#calc2">Калькулятор стоимости</a>
 						</li>
 
 						<li class="footer-main__service-item">
@@ -467,11 +485,12 @@
 						<span class="footer-main__block-title">Контакты</span>
 						<ul class="footer-main__contacts">
 							<li class="footer-main__contacts-item">
-								<a class="footer-main__contacts-tel tel effects" href="tel:+79999999999">+7 999 999-99-99</a>
+								<a class="footer-main__contacts-tel tel effects" href="tel:+74959998854">+7 495 999-88-54</a>
 							</li>
 
 							<li class="footer-main__contacts-item">
-								<a class="footer-main__contacts-callback callback effects" href="#">Перезвоните мне</a>
+								<button class="footer-main__contacts-callback callback effects"
+									data-path="callback">Перезвоните мне</button>
 							</li>
 
 							<li class="footer-main__contacts-item">
