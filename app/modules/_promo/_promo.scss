@@ -92,6 +92,13 @@
 		max-width: 160px;
 		padding-top: 50px;
 		position: relative;
+		transform: translateY(200px);
+		opacity: 0;
+
+		&.animated {
+			transform: translateY(0);
+			opacity: 1;
+		}
 
 		@include mq("tablet-s", max) {
 			font-size: 14px;
@@ -119,6 +126,8 @@
 		}
 
 		&--folder {
+			transition: transform 0.3s ease 0.3s, opacity 0.3s ease 0.3s;
+
 			&:before {
 				background-image: url(../images/icons/icon-folder.svg);
 				width: 46px;
@@ -130,6 +139,8 @@
 		}
 
 		&--time {
+			transition: transform 0.3s ease 0.6s, opacity 0.3s ease 0.6s;
+
 			&:before {
 				background-image: url(../images/icons/icon-time.svg);
 				width: 38px;
@@ -141,6 +152,8 @@
 		}
 
 		&--letter {
+			transition: transform 0.3s ease 0.9s, opacity 0.3s ease 0.9s;
+
 			&:before {
 				background-image: url(../images/icons/icon-letter.svg);
 				width: 58px;
@@ -152,6 +165,8 @@
 		}
 
 		&--home {
+			transition: transform 0.3s ease 1.2s, opacity 0.3s ease 1.2s;
+
 			&:before {
 				background-image: url(../images/icons/icon-home.svg);
 				width: 38px;

@@ -1,5 +1,6 @@
 .calc {
 	background-color: $dark-bg;
+	overflow: hidden;
 
 	&__descr {
 		display: flex;
@@ -142,6 +143,12 @@
 		border: 3px solid transparent;
 		border-image: linear-gradient(#ff4c00, #fb7405);
 		border-image-slice: 1;
+		transform: translateX(200%);
+		transition: transform 0.7s ease 0s;
+
+		&.animated {
+			transform: translateX(0);
+		}
 
 		@include mq("tablet", max) {
 			font-size: 32px;

@@ -43,6 +43,14 @@
 		width: fit-content;
 		position: relative;
 		margin-bottom: 27px;
+		transform: translateY(-70px);
+		opacity: 0;
+		transition: transform 0.8s ease 0s, opacity 0.8s ease 0s;
+
+		&.animated {
+			transform: translateY(0);
+			opacity: 1;
+		}
 
 		@include mq("desktop-s", max) {
 			font-size: 26px;

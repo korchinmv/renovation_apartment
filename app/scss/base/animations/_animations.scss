@@ -22,6 +22,28 @@
 	}
 }
 
+@keyframes slideLeft {
+	0% {
+		transform: translate(-200%, 0);
+	}
+
+	100% {
+		transform: translate(0, 0);
+	}
+}
+
+@keyframes fadeDown {
+	0% {
+		transform: translate(0, 120%);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translate(0, 0);
+		opacity: 1;
+	}
+}
+
 .hero,
 .calc__link {
 	position: relative;
@@ -36,5 +58,17 @@
 		left: 0;
 		background-color: rgba($black, 0.35);
 		z-index: 1;
+	}
+}
+
+.hero {
+	&__title {
+		animation-name: slideLeft;
+		animation-duration: 0.7s;
+	}
+
+	&__inner {
+		animation-name: fadeDown;
+		animation-duration: 0.8s;
 	}
 }

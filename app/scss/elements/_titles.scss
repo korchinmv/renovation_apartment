@@ -2,6 +2,12 @@
 	font-size: 48px;
 	font-weight: 700;
 	text-transform: uppercase;
+	transform: translateX(-200%);
+	transition: transform 0.7s ease-out;
+
+	&.animated {
+		transform: translateX(0);
+	}
 
 	@include mq("tablet-s", max) {
 		font-size: 36px;

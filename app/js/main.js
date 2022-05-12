@@ -165,3 +165,23 @@ btnClose.addEventListener('click', (e) => {
 let selector = document.querySelectorAll('input[type="tel"]');
 let im = new Inputmask('+7 (999) 999-99-99');
 im.mask(selector);
+
+//SCROLL ANIMATION
+const scrollItems = document.querySelectorAll('.scroll-item');
+const scrollAnimation = () => {
+	let windowCenter = (window.innerHeight) + window.scrollY;
+	console.log(windowCenter);
+	scrollItems.forEach(el => {
+		let scrollOffset = el.offsetTop + el.offsetHeight;
+		if (windowCenter >= scrollOffset) {
+			el.classList.add('animated');
+		} else {
+			el.classList.remove('animated');
+		}
+	});
+};
+
+scrollAnimation();
+window.addEventListener('scroll', () => {
+	scrollAnimation();
+});
